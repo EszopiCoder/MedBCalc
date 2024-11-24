@@ -34,11 +34,9 @@ function findRow() {
   // Source: https://stackoverflow.com/questions/4916880/cleanest-way-to-search-a-2d-array
   // Import data
   //var data = "foo,bar,baz\n42,33,42\n12,76,54\n13,42,17";
-
-  var data = "./Data/Test.csv"
   
   // Parse CSV and convert to array
-  var parsed = deserializeCSV(data);
+  var parsed = deserializeCSV("./Data/Test.csv");
 
   //Search for row number
   var query = "J7515";
@@ -49,5 +47,5 @@ function findRow() {
     while (parsed[++row].length <= col) // not this row
       col -= parsed[row].length; // so adjust and try again
 
-  document.getElementById('output').innerHTML = row;
+  document.getElementById('output').innerHTML = parsed;
 }
