@@ -36,8 +36,8 @@ function findRow() {
   //var data = "foo,bar,baz\n42,33,42\n12,76,54\n13,42,17";
   
   // Parse CSV and convert to array
-  var parsed = deserializeCSV("./Data/Test.csv");
-
+  var parsed = deserializeCSV(https://eszopicoder.github.io/MedBCalc/Data/Test.csv);
+  
   //Search for row number
   var query = "J7515";
   var flat = [].concat.apply([], parsed);
@@ -47,5 +47,5 @@ function findRow() {
     while (parsed[++row].length <= col) // not this row
       col -= parsed[row].length; // so adjust and try again
 
-  document.getElementById('output').innerHTML = parsed;
+  document.getElementById('output').innerHTML = data;
 }
