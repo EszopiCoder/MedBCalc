@@ -21,6 +21,16 @@ async function loadData() {
     document.getElementById('pricingData').append(pricingData);
   }
 }
+// Sort JSON alphanumeric Z to A
+// https://stackoverflow.com/questions/19259233/sorting-json-by-specific-element-alphabetically
+function compareStrings(a, b) {
+  // Assuming you want case-insensitive comparison
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+
+  return (a > b) ? -1 : (a < b) ? 1 : 0;
+}
+
 
 // Source: https://www.30secondsofcode.org/js/s/convert-csv-to-array-object-or-json/
 // Parse 1 row of CSV and convert to array
