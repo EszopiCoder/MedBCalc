@@ -30,3 +30,28 @@ function compareStrings(a, b) {
 
   return (a > b) ? -1 : (a < b) ? 1 : 0;
 }
+
+async function getPaymentLimit(HCPCS){
+ const data = await getPricingData();
+ document.getElementById("output").innerHTML = data[HCPCS];
+}
+
+// https://uufishtxl.github.io/js_api_fetch_csv.html
+// https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/
+async function getPricingData() {
+  const code = [];
+  const limit = [];
+  let dict = {};
+  const response = await fetch(document.getElementById('pricingData').value);
+  const data = await response.text();
+  const table = data.split(/\n/).slice(1,-1);
+  table.forEach(row => {
+    const columns = row.split(',');
+    const HCPCS = columns[0];
+    code.push(HCPCS);
+    const paymentLimit = columns[1];
+    limit.push(parseFloat(paymentLimit));
+    dict[HCPCS] = paymentLimit;
+  })
+  return dict
+}
