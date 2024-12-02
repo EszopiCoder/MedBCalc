@@ -9,7 +9,34 @@
       <label for="pricingData">Select Pricing File:</label>
       <select id="pricingData" name="pricingData"></select>
     </div>
-    <input type="button" value="Test" onclick="getPaymentLimit('J7500')">
-    <div id="output"></div>
+    <form id="drugForm">
+        <select id="drugName" name="drugName"></select>
+        <button type="button" id="addButton">Add Drug</button>
+        <input type="button" value="Calculate" onclick="calc()">
+        <div id="fieldDrugList"></div>
+    </form>
+    <table id="tblDetail" style="display:none">
+      <thead>
+        <tr>
+          <th>Drug Name</th>
+          <th>Strength</th>
+          <th>Tablets</th>
+          <th>80% Medicare</th>
+          <th>20% Copay</th>
+        </tr>
+      </thead>
+      <tbody id="tblDetailData"></tbody>
+    </table>
+    <table id="tblBasic" style="display:none">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>20% Copay</th>
+        </tr>
+      </thead>
+      <tbody id="tblBasicData"></tbody>
+    </table>
+    <input type="button" value="Copy Result" onclick="copyText()">
+    <p id="copyAlert" class="result" style="display:none">
   </body>
 </html>
