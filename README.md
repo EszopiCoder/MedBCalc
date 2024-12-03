@@ -21,3 +21,9 @@ Proof:
 $$ \frac{Medicare}{Total} = \frac{80}{100}  $$
 
 $$ Total * 80 = Medicare * 100 $$
+
+$$ Total = Medicare * 1.25 $$
+
+$$ Total * 0.2 = Medicare * 1.25 * 0.2 $$
+
+$$ Total * 0.2 = Medicare * 0.25 $$
