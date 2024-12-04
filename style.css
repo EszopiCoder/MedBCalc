@@ -1,0 +1,52 @@
+.remove-button {
+  color: red;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+hr {
+  width: 700px;
+}
+
+body {
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-size: 20px;
+  width: 700px;
+}
+
+form div {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+input[type=number], select {
+  direction: ltr;
+  font-size: 20px;
+}
+
+input[type=button] {
+  background-color: #1994D1;
+  color: white;
+  //padding: 14px 20px;
+  //margin: 8px 0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+input[type=button]:hover {
+  background-color: #1473A3;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
