@@ -2,18 +2,25 @@
   <head>
     <base target="_top">
     <title>Medicare B Immunos Calc</title>
+    <link rel="stylesheet" href="style.css">
     <script src="calc.js"></script>
   </head>
   <body>
-    <div>
-      <label for="pricingData">Select Pricing File:</label>
-      <select id="pricingData" name="pricingData"></select>
-    </div>
+    <h1>Medicare Part B Immunos Copay Calculator</h1>
+    <p>Open source and web-based (<a href="https://github.com/EszopiCoder/MedBCalc/" target="_blank">GitHub</a>)</p>
+    <hr>
     <form id="drugForm">
+      <div>
+        <label for="pricingData">Select Pricing File:</label>
+        <select id="pricingData" name="pricingData" onchange="clearField()"></select>
+        <input type="button" value="View Data" onclick="openCSV()">
+      </div>
+      <div>
         <select id="drugName" name="drugName"></select>
-        <button type="button" id="addButton">Add Drug</button>
+        <input type="button" id="addButton" value="Add Drug">
         <input type="button" value="Calculate" onclick="calc()">
-        <div id="fieldDrugList"></div>
+      </div>
+      <div id="fieldDrugList"></div>
     </form>
     <table id="tblDetail" style="display:none">
       <thead>
@@ -27,6 +34,7 @@
       </thead>
       <tbody id="tblDetailData"></tbody>
     </table>
+    <br>
     <table id="tblBasic" style="display:none">
       <thead>
         <tr>
@@ -36,7 +44,9 @@
       </thead>
       <tbody id="tblBasicData"></tbody>
     </table>
-    <input type="button" value="Copy Result" onclick="copyText()">
-    <p id="copyAlert" class="result" style="display:none">
+    <div>
+      <input type="button" value="Copy Result" onclick="copyText()">
+      <p id="copyAlert" class="result" style="display:none">
+    </div>
   </body>
 </html>
