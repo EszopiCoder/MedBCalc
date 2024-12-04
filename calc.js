@@ -7,12 +7,12 @@ const arrDrugs = [
   ["J7518","MYFORTIC (mycophenolic acid)",180,[180,360]],
   ["J7527","ZORTRESS (everolimus)",0.25,[0.25,0.5,0.75]],
   ["J7520","RAPAMUNE (sirolimus)",1,[0.5,1]],
-  ["J7503","ENVARSUS (tacrolimus)", 0.25,[0.75,1,4]],
+  ["J7503","ENVARSUS XR (tacrolimus ER)", 0.25,[0.75,1,4]],
   ["J7507","PROGRAF (tacrolimus)",1,[0.5,1,5]],
-  ["J7508","ASTAGRAF (tacrolimus)",0.1,[0.5,1,5]],
-  ["J7509","methylprednisolone",4,[4,8,16,32]],
-  ["J7510","prednisolone",5,[5]],
-  ["J7512","prednisone",1,[1,5,10]]
+  ["J7508","ASTAGRAF XL (tacrolimus ER)",0.1,[0.5,1,5]],
+  ["J7509","methylPREDNISolone",4,[4,8,16,32]],
+  ["J7510","predniSOLONE",5,[5]],
+  ["J7512","predniSONE",1,[1,5,10]]
 ];
 
 /**
@@ -114,6 +114,20 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function addField() {
+    // Warn user if data is not current
+    const pricingData = document.getElementById('pricingData').options[document.getElementById('pricingData').selectedIndex].text;
+    const year = parseInt(pricingData.slice(0,4));
+    const quarter = parseInt(pricingData.slice(5,6));
+    // Calculate end of quarter month using arithmetic sequence formula
+    // month = 3+((quarter-1)*3)
+    const endQuarter = new Date(year,3+((quarter-1)*3),0);
+    const today = new Date();
+    if (endQuarter < today) {
+      if (!confirm('WARNING\nOld pricing data being used. Please use current pricing data or contact the administrator to update pricing files.\nDo you want to proceed?')) {
+        return
+      }
+    }
+
     // Create a new div to hold the input and remove button
     const div = document.createElement('div');
     div.classList.add('field-DrugList');
@@ -174,6 +188,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
+ * Clear add added drugs.
+ */
+function clearField() {
+  document.getElementById('fieldDrugList').innerHTML = '';
+}
+
+/**
  * Hide tables from displaying.
  */
 function hideTables() {
@@ -182,6 +203,7 @@ function hideTables() {
 }
 
 // https://stackoverflow.com/questions/48996441/javascript-iterate-over-form-inputs-and-collect-values-as-key-value-pairs-in-o
+// https://stackoverflow.com/questions/222309/calculate-last-day-of-month
 /**
  * Calculate copays and display in table.
  * Triggered by onclick event.
@@ -257,11 +279,11 @@ function calc() {
     rowDetail.insertCell().textContent = '';
     rowDetail.insertCell().textContent = '$'+totalMedicare.toFixed(4);
     rowDetail.insertCell().textContent = '$'+totalCopay.toFixed(4);
-    document.getElementById('tblDetail').style.display = 'block';
+    document.getElementById('tblDetail').style.display = 'inline-block';
     let rowBasic = tblBasic.insertRow();
     rowBasic.insertCell().textContent = 'Total:';
     rowBasic.insertCell().textContent = '$'+totalCopay.toFixed(4);
-    document.getElementById('tblBasic').style.display = 'block';
+    document.getElementById('tblBasic').style.display = 'inline-block';
   } else {
     // Clear tables
     tblDetail.innerHTML = '';
@@ -286,4 +308,20 @@ function copyText() {
       document.getElementById('copyAlert').style.display = 'none';
     }, 2000);
   }
+}
+
+/**
+ * Open CSV in new tab.
+ * Triggered by onclick event.
+ */
+function openCSV() {
+  openURL(document.getElementById('pricingData').value);
+}
+
+/**
+ * Open link in new tab.
+ * @param {string} link URL to open.
+ */
+function openURL(link) {
+  window.open(link, '_blank')
 }
