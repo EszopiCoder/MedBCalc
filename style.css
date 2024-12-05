@@ -1,9 +1,3 @@
-.remove-button {
-  color: red;
-  cursor: pointer;
-  font-size: 30px;
-}
-
 hr {
   width: 700px;
 }
@@ -26,6 +20,21 @@ form div {
   padding-bottom: 20px;
 }
 
+.field-DrugList {
+  float: right;
+  margin-right: 30px;
+}
+
+.drugListInfo {
+  margin-right: 5px;
+}
+
+.remove-button {
+  color: red;
+  cursor: pointer;
+  font-size: 30px;
+}
+
 input[type=number], select {
   direction: ltr;
   font-size: 20px;
@@ -34,12 +43,11 @@ input[type=number], select {
 input[type=button] {
   background-color: #1994D1;
   color: white;
-  //padding: 14px 20px;
-  //margin: 8px 0;
+  margin: 1px 0;
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 input[type=button]:hover {
@@ -49,4 +57,19 @@ input[type=button]:hover {
 table {
   margin-left: auto;
   margin-right: auto;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #6E6867;
+  color: white;
 }
