@@ -1,6 +1,8 @@
 # Medicare Part B Immunos Calc
 ## Description
-Free HTML/Javascript Based Copay Calculator for Medicare Part B Immunos
+Free HTML/Javascript Based Copay Calculator for Medicare Part B Immunosuppressants.
+
+Note: Traditional Medicare Part B covers 80% of the costs for the following immunosuppressants listed below. This calculator predicts the 20% copay the patient is responsible for.
 
 ## Usage
 This web-based calculator is deployed via GitHub pages and can be accessed from any web browser at the following [link](https://eszopicoder.github.io/MedBCalc/)
