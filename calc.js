@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     drugLabel.id = 'drugLabel';
     drugLabel.for = 'selectStrength';
     drugLabel.classList.add('drugListInfo');
-    drugLabel.innerHTML = arrDrugs[drugIndex][1];
+    drugLabel.innerHTML = arrDrugs[drugIndex][1].replace(/[1-9][0-9]{0,2}mg/g,'');
 
     // Create # of tablets input
     const numTablets = document.createElement('input');
@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function clearField() {
   document.getElementById('fieldDrugList').innerHTML = '';
+  hideTables();
 }
 
 /**
@@ -200,6 +201,7 @@ function clearField() {
 function hideTables() {
   document.getElementById('tblDetail').style.display = 'none';
   document.getElementById('tblBasic').style.display = 'none';
+  document.getElementById('copyTable').style.display = 'none';
 }
 
 // https://stackoverflow.com/questions/48996441/javascript-iterate-over-form-inputs-and-collect-values-as-key-value-pairs-in-o
@@ -257,15 +259,17 @@ function calc() {
       // Add to running total
       totalMedicare += medicare;
       totalCopay += copay;
+      // Detailed table
       let rowDetail = tblDetail.insertRow();
       rowDetail.insertCell().textContent = drugName;
       rowDetail.insertCell().textContent = drugStrength;
       rowDetail.insertCell().textContent = numTablets;
       rowDetail.insertCell().textContent = '$'+medicare.toFixed(4);
       rowDetail.insertCell().textContent = '$'+copay.toFixed(4);
+      // Basic table
       let rowBasic = tblBasic.insertRow();
       rowBasic.insertCell().textContent = drugName+' '+drugStrength+' #'+numTablets
-      rowBasic.insertCell().textContent = '$'+copay.toFixed(4);
+      rowBasic.insertCell().textContent = '$'+copay.toFixed(2);
       counter = 0;
     } else {
       counter += 1;
@@ -282,12 +286,14 @@ function calc() {
     document.getElementById('tblDetail').style.display = 'inline-block';
     let rowBasic = tblBasic.insertRow();
     rowBasic.insertCell().textContent = 'Total:';
-    rowBasic.insertCell().textContent = '$'+totalCopay.toFixed(4);
+    rowBasic.insertCell().textContent = '$'+totalCopay.toFixed(2);
     document.getElementById('tblBasic').style.display = 'inline-block';
+    document.getElementById('copyTable').style.display = 'block';
   } else {
     // Clear tables
     tblDetail.innerHTML = '';
     tblBasic.innerHTML = '';
+    document.getElementById('copyTable').style.display = 'none';
   }
 }
 
