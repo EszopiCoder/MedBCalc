@@ -162,6 +162,8 @@ document.addEventListener('DOMContentLoaded', function() {
     numTablets.id = 'numTablets';
     numTablets.classList.add('drugListInfo');
     numTablets.placeholder = 'Enter number of tablets';
+    numTablets.min = '1';
+    numTablets.step = '1';
 
     // Create the remove button
     const removeButton = document.createElement('span');
