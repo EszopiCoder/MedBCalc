@@ -45,6 +45,17 @@ async function loadPricingData() {
     pricingData.innerHTML = file.name;
     document.getElementById('pricingData').append(pricingData);
   }
+  // Pre-select current pricing data
+  const pricingData = document.getElementById('pricingData').options[document.getElementById('pricingData').selectedIndex].text;
+  const year = parseInt(pricingData.slice(0,4));
+  const quarter = parseInt(pricingData.slice(5,6));
+  // Calculate beginning of quarter month using arithmetic sequence formula
+  // month = 1+((quarter-1)*3)
+  const beginQuarter = new Date(year,1+((quarter-1)*3),1);
+  const today = new Date();
+  if (beginQuarter > today) {
+    document.getElementById('pricingData').selectedIndex = 1;
+  }
 }
 
 // https://stackoverflow.com/questions/19259233/sorting-json-by-specific-element-alphabetically
@@ -118,12 +129,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const pricingData = document.getElementById('pricingData').options[document.getElementById('pricingData').selectedIndex].text;
     const year = parseInt(pricingData.slice(0,4));
     const quarter = parseInt(pricingData.slice(5,6));
+    // Calculate beginning of quarter month using arithmetic sequence formula
+    // month = 1+((quarter-1)*3)
+    const beginQuarter = new Date(year,1+((quarter-1)*3),1);
     // Calculate end of quarter month using arithmetic sequence formula
     // month = 3+((quarter-1)*3)
     const endQuarter = new Date(year,3+((quarter-1)*3),0);
     const today = new Date();
     if (endQuarter < today) {
       if (!confirm('WARNING\nOld pricing data being used. Please use current pricing data or contact the administrator to update pricing files.\nDo you want to proceed?')) {
+        return
+      }
+    } else if (beginQuarter > today) {
+      if (!confirm('WARNING\nToo new pricing data being used. Please select current pricing data.\nDo you want to proceed?')) {
         return
       }
     }
