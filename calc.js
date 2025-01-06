@@ -57,6 +57,7 @@ async function loadPricingData() {
     document.getElementById('pricingData').selectedIndex = 1;
   } else {
     document.getElementById('pricingData').selectedIndex = 0;
+  }
 }
 
 // https://stackoverflow.com/questions/19259233/sorting-json-by-specific-element-alphabetically
