@@ -133,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // month = (quarter-1)*3
     const beginQuarter = new Date(year,(quarter-1)*3,1);
     // Calculate end of quarter month using arithmetic sequence formula
-    // month = 2+((quarter-1)*3)
-    const endQuarter = new Date(year,2+((quarter-1)*3),0);
+    // month = 3+((quarter-1)*3)
+    const endQuarter = new Date(year,3+((quarter-1)*3),0);
     const today = new Date();
     if (endQuarter < today) {
       if (!confirm('WARNING\nOld pricing data being used. Please use current pricing data or contact the administrator to update pricing files.\nDo you want to proceed?')) {
