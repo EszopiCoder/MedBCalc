@@ -10,8 +10,8 @@ This web-based calculator is deployed via GitHub pages and can be accessed from 
 ## Documentation
 Pricing files are reported each quarter and can be found at the following [link](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)
 
-| HCPCS Code | Drug Name | HCPCS Code Strength | Available Strengths |
-| --- | --- | --- | --- |
+| HCPCS Code | Drug Name | HCPCS Code Strength | Available Strengths | Notes |
+| --- | --- | --- | --- | --- |
 | J7500 | IMURAN (azathioprine) | 50 mg | 25 mg, 50 mg, 75 mg, 100 mg |
 | J7502 | NEORAL (cyclosporine) | 100 mg | 100 mg |
 | J7503 | ENVARSUS XR (tacrolimus ER) | 0.25 mg | 0.75 mg, 1 mg, 4 mg |
@@ -23,7 +23,8 @@ Pricing files are reported each quarter and can be found at the following [link]
 | J7515 | NEORAL (cyclosporine) | 25 mg | 25 mg |
 | J7517 | CELLCEPT (mycophenolate mofetil) | 250 mg | 250 mg, 500 mg |
 | J7518 | MYFORTIC (mycophenolic acid) | 180 mg | 180 mg, 360 mg |
-| J7520 | RAPAMUNE (sirolimus) | 1mg | 0.5 mg, 1 mg |
+| J7520 | RAPAMUNE (sirolimus) | 1 mg | 0.5 mg, 1 mg |
+| J7521 | PROGRAF Granules (tacrolimus) | 0.1 mg | 0.2 mg, 1 mg | Added April 2025 |
 | J7527 | ZORTRESS (everolimus) | 0.25 mg | 0.25 mg, 0.5 mg, 0.75 mg |
 
 Medicare payment (80%) is calculated using the following formula:
