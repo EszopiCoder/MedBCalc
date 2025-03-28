@@ -9,6 +9,7 @@ const arrDrugs = [
   ["J7520","RAPAMUNE (sirolimus)",1,[0.5,1]],
   ["J7503","ENVARSUS XR (tacrolimus ER)", 0.25,[0.75,1,4]],
   ["J7507","PROGRAF (tacrolimus)",1,[0.5,1,5]],
+  ["J7521","PROGRAF Granules (tacrolimus)",0.1,[0.2,1]],
   ["J7508","ASTAGRAF XL (tacrolimus ER)",0.1,[0.5,1,5]],
   ["J7509","methylPREDNISolone",4,[4,8,16,32]],
   ["J7510","predniSOLONE",5,[5]],
