@@ -13,7 +13,15 @@ const arrDrugs = [
   ["J7508","ASTAGRAF XL (tacrolimus ER)",0.1,[0.5,1,5]],
   ["J7509","methylPREDNISolone",4,[4,8,16,32]],
   ["J7510","predniSOLONE",5,[5]],
-  ["J7512","predniSONE",1,[1,5,10]]
+  ["J7512","predniSONE",1,[1,5,10]],
+  //["J8520","XELODA (capecitabine) 150 mg [DEPRICATED]",150,[150]],
+  //["J8521","XELODA (capecitabine) 500 mg [DEPRICATED]",500,[500]],
+  ["J8522","XELODA (capecitabine)",50,[150,500]],
+  ["J8530","CYTOXAN (cyclophosphamide)",25,[25,50]],
+  ["J8560","VEPESID (etoposide)",50,[50]],
+  ["J8610","methotrexate",2.5,[2.5]],
+  ["J8700","TEMODAR (temozolomide)",5,[5,20,100,140,180,250]],
+  ["J8705","HYCAMTIN (topotecan)",0.25,[0.25,1]]
 ];
 
 /**
