@@ -26,7 +26,7 @@ Pricing files are reported each quarter and can be found at the following [link]
 | Immunosuppressant | J7520 | RAPAMUNE (sirolimus) | 1 mg | 0.5 mg, 1 mg |
 | Immunosuppressant | J7521 | PROGRAF Granules (tacrolimus) | 0.1 mg | 0.2 mg, 1 mg | Added April 2025 |
 | Immunosuppressant | J7527 | ZORTRESS (everolimus) | 0.25 mg | 0.25 mg, 0.5 mg, 0.75 mg |
-| Immunosuppressant | J7528 | CELLCEPT susp (mycophenolate mofetil) | 200 mg/mL | Added January 2026 |
+| Immunosuppressant | J7528 | CELLCEPT susp (mycophenolate mofetil) | 100 mg | 200 mg/mL | Added January 2026 |
 | Oncology | J8520	| XELODA (capecitabine)	| 150 mg	| 150 mg	| Depricated October 2025 |
 | Oncology | J8521	| XELODA (capecitabine)	| 500 mg	| 500 mg	| Depricated October 2025 |
 | Oncology | J8522	| XELODA (capecitabine)	| 50 mg	| 150 mg, 500 mg	| Added October 2025 |
