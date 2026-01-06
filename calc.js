@@ -4,6 +4,7 @@ const arrDrugs = [
   ["J7515","NEORAL (cyclosporine) 25mg",25,[25]],
   ["J7502","NEORAL (cyclosporine) 100mg",100,[100]],
   ["J7517","CELLCEPT (mycophenolate mofetil)",250,[250,500]],
+  ["J7528","CELLCEPT (mycophenolate mofetil) SUSP 200 mg/mL",100,[200]],
   ["J7518","MYFORTIC (mycophenolic acid)",180,[180,360]],
   ["J7527","ZORTRESS (everolimus)",0.25,[0.25,0.5,0.75]],
   ["J7520","RAPAMUNE (sirolimus)",1,[0.5,1]],
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     numTablets.type = 'number';
     numTablets.id = 'numTablets';
     numTablets.classList.add('drugListInfo');
-    numTablets.placeholder = 'Enter number of tablets';
+    numTablets.placeholder = 'Enter number of tablets/capsules/mL';
     numTablets.min = '1';
     numTablets.step = '1';
 
