@@ -6,6 +6,7 @@ const arrDrugs = [
   ["J7517","CELLCEPT (mycophenolate mofetil)",250,[250,500]],
   ["J7528","CELLCEPT (mycophenolate mofetil) SUSP 200 mg/mL",100,[200]],
   ["J7518","MYFORTIC (mycophenolic acid)",180,[180,360]],
+  ["J7514","MYHIBBIN (mycophenolate mofetil) SUSP 200 mg/mL",100,[200]],
   ["J7527","ZORTRESS (everolimus)",0.25,[0.25,0.5,0.75]],
   ["J7520","RAPAMUNE (sirolimus)",1,[0.5,1]],
   ["J7503","ENVARSUS XR (tacrolimus ER)", 0.25,[0.75,1,4]],
