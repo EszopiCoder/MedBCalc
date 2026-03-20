@@ -20,6 +20,7 @@ Pricing files are reported each quarter and can be found at the following [link]
 | Immunosuppressant | J7509 | methylPREDNISolone | 4 mg | 4 mg, 8 mg, 16 mg, 32 mg |
 | Immunosuppressant | J7510 | predniSOLONE | 5 mg | 5 mg |
 | Immunosuppressant | J7512 | predniSONE | 1 mg | 1 mg, 5 mg, 10 mg |
+| Immunosuppressant | J7514 | MYHIBBIN (mycophenolate mofetil) | 100 mg | 200 mg | Added January 2026 |
 | Immunosuppressant | J7515 | NEORAL (cyclosporine) | 25 mg | 25 mg |
 | Immunosuppressant | J7517 | CELLCEPT (mycophenolate mofetil) | 250 mg | 250 mg, 500 mg |
 | Immunosuppressant | J7518 | MYFORTIC (mycophenolic acid) | 180 mg | 180 mg, 360 mg |
